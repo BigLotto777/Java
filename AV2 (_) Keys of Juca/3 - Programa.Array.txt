@@ -1,0 +1,68 @@
+**Vitor Beloto - 22252903**
+
+import java.util.Scanner;
+
+public class VerificaPermutacao {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número: ");
+        int numero1 = scanner.nextInt();
+
+        System.out.print("Digite o segundo número: ");
+        int numero2 = scanner.nextInt();
+
+        if (numero1 <= 0 || numero2 <= 0) {
+            System.out.println("Os números devem ser positivos.");
+            return;
+        }
+
+        String str1 = Integer.toString(numero1);
+        String str2 = Integer.toString(numero2);
+
+        if (str1.length() != str2.length()) {
+            System.out.println("Os números não são permutações um do outro.");
+            return;
+        }
+
+        int[] digitos = new int[10];
+
+        for (int i = 0; i < str1.length(); i++) {
+            int digito = Character.getNumericValue(str1.charAt(i));
+            digitos[digito]++;
+        }
+
+        for (int i = 0; i < str2.length(); i++) {
+            int digito = Character.getNumericValue(str2.charAt(i));
+            digitos[digito]--;
+        }
+
+        for (int i = 0; i < 10; i++) {
+            if (digitos[i] != 0) {
+                System.out.println("Os números não são permutações um do outro.");
+                return;
+            }
+        }
+
+        System.out.println("Os números são permutações um do outro.");
+    }
+}
+
+--------------------------------------------------------------------------------------------------------
+**Puxando a classe de um Array comum**
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class VerificaPermutacao {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número: ");
+        int numero1 = scanner.nextInt();
+
+        System.out.print("Digite o segundo número: ");
+        int numero2 = scanner.nextInt();
+
+        if (numero1 <= 0 || numero2 <= 0) {
+            System.out.println("Os números devem ser posit

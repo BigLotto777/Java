@@ -1,0 +1,47 @@
+**Vitor Beloto - 22252903**
+
+import java.util.Scanner;
+
+public class ArrayControle {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o tamanho do array: ");
+        int tamanhoArray = scanner.nextInt();
+
+        Array meuArray = new Array(tamanhoArray);
+
+        for (int i = 0; i < tamanhoArray; i++) {
+            System.out.print("Digite o número " + (i + 1) + ": ");
+            int numero = scanner.nextInt();
+            meuArray.adicionar(numero);
+        }
+
+        int media = meuArray.calculaMedia();
+        System.out.println("Média: " + media);
+    }
+}
+--------------------------------------------------------------------------------------
+**Implementacao Classe.Array**
+
+import java.util.Scanner;
+
+public class ArrayControle {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o tamanho do array: ");
+        int tamanhoArray = scanner.nextInt();
+
+        Array meuArray = new Array(tamanhoArray);
+
+        for (int i = 0; i < tamanhoArray; i++) {
+            System.out.print("Digite o número " + (i + 1) + ": ");
+            int numero = scanner.nextInt();
+            meuArray.adicionar(numero);
+        }
+
+        int media = meuArray.calculaMedia();
+        System.out.println("Média: " + media);
+    }
+}

@@ -1,0 +1,35 @@
+**Vitor Beloto - 22252903**
+
+public class Array {
+    private int[] array;
+    private int currentSize;
+    private int maxSize;
+
+    public Array(int size) {
+        array = new int[size];
+        currentSize = 0;
+        maxSize = size;
+    }
+
+    public boolean adicionar(int n) {
+        if (currentSize < maxSize) {
+            array[currentSize] = n;
+            currentSize++;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public int calculaMedia() {
+        if (currentSize == 0) {
+            return 0; // Retorna 0 se não houver elementos no array para evitar divisão por zero
+        }
+
+        int soma = 0;
+        for (int i = 0; i < currentSize; i++) {
+            soma += array[i];
+        }
+        return soma / currentSize;
+    }
+}
